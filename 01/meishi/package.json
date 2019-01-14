@@ -1,0 +1,22 @@
+{
+  "name": "meishi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa": "^2.0.48",
+    "@types/koa-static-cache": "^5.1.0",
+    "@types/nunjucks": "^3.1.0",
+    "koa": "^2.6.2",
+    "koa-controllers": "^0.1.6",
+    "koa-static-cache": "^5.1.2",
+    "nunjucks": "^3.1.7",
+    "reflect-metadata": "^0.1.12"
+  }
+}

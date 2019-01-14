@@ -1,0 +1,250 @@
+.addmenuform>div{
+    margin-top:20px; 
+}
+.addmenuform>div>p{
+    color: #888;
+    position: relative;
+    display: inline;
+}
+.addmenuform>div>p::after{
+    content: '*';
+    position: absolute;
+    right: -8px;
+    top: 0;
+    color: #f00;
+}
+input[name="menuname"]{
+    display: block;
+    height: 32px;
+    width: 100%;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+}
+
+input[name="addfile"] {
+    display: none;
+}
+.filelabel{
+    display: block;
+    width: 86px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    background: #fcfce3;
+    border: 1px solid #c9c890;
+    color: #333;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+textarea[name="describe"]{
+    display: block;
+    width: 100%;
+    height: 128px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+.optionlist li{
+    float: left;
+    margin: 10px 20px 0 0;
+    height: 28px;
+    position: relative;
+}
+.select{
+    display: inline-block;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    line-height: 26px;
+}
+.select span{
+    float: left;
+    height: 26px;   
+    padding: 0 5px;
+    color: #999;
+}
+.select em{
+    float: left;
+    width: 50px;
+    height: 26px;
+    text-align: right;
+    padding-right: 5px;
+}
+.select i{
+    float: left;
+    width: 25px;
+    text-align: center;
+    height: 26px;
+}
+.select i::before{
+    content: '';
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 5px dashed transparent;
+    border-top:6px solid #ccc;
+    margin: 11px auto 0;
+    overflow: hidden;
+}
+.select:hover i{
+    background: #f8f8c2;
+}
+.select:hover i::before{
+    border-top-color: #999
+}
+.selectoption{
+    position: absolute;
+    background: #f8f8c2;
+    left:0;
+    bottom: 0;
+    transform: translateY(100%);
+    font-size: 0;
+    white-space: nowrap;
+    z-index: 10;
+}
+.selectoption span{
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    color: #999;
+    cursor: pointer;
+    text-align: center;
+    padding: 3px 4px;
+    margin: 5px;
+    background: #FFF;
+    min-width: 34px;
+}
+.hidden{
+    display: none;
+}
+.select .more_option {
+    width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.addfood h4{
+    font-size: 16px;
+    color: #666;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 0 0;
+}
+.addfood input{
+    width: 48%;
+    float: left;
+    border: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 0 10px; 
+}
+.foodnum button {
+    width: 4%;
+    float: left;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #999;
+}
+.addfood>div:hover button, 
+.foodlist li:hover button {
+    display: block;
+}
+.addfoodgroup{
+    margin: 15px 0;
+    border: 1px solid #c9c890;
+    background: #fcfce3;
+    border-radius: 3px;
+    color: #333;
+    font-size: 14px;
+    line-height: 28px;
+    cursor: pointer;
+    float: none;
+    width: 88px;
+    text-align: center;
+}
+.upload{
+    display: block;
+    width: 72px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #c9c890;
+    background: #fcfce3;
+    text-align: center;
+    margin: 10px 0;
+}
+.upload input[type="file"]{
+    display: none;
+}
+.piclist label{
+    float: left;
+    width: 208px;
+    height: 156px;
+    background:#f7f7f7 url(../img/add.png) center 45px no-repeat;
+    border: #999 solid 1px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.piclist .text {
+    margin-top: 80px;
+    color: #5b5b5b;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+}
+.piclist input[type="file"]{
+    display: none;
+}
+.piclist textarea{
+    width: 650px;
+    height: 156px;
+    border: #999 solid 1px;
+    float: left;
+    margin-left: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.piclist li{
+    margin: 15px 0;
+}
+.side_skill{
+    float: left;
+    margin-left: 10px;
+    width: 24px;
+}
+.side_skill span{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ccc;
+    float: left;
+    text-align: center;
+    line-height: 24px;
+    color: #999;
+    margin-bottom: 10px;
+}
+.addmenuform>div .unrequired::after {
+    content: '';
+}
+.tips{
+    display: block;
+    width: 100%;
+    height: 128px;
+    border: 1px solid #ccc;
+    resize: both;
+    margin: 15px 0 ;
+    padding: 10px;
+}
+.release{
+    background: #ff6767;
+    border: 1px solid #ff6767;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    width: 140px;
+}
