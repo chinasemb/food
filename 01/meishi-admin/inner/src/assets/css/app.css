@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+}
+html, body, #app, .el-container {
+  height: 100%;
+}
+.el-header{
+  background-color: #409EFF;
+}
+.el-aside{
+  background-color: #2061e2;
+  width: 201px !important;
+}
+.el-main{
+  background-color: #fff;
+}
+.el-main .main-container{
+  margin-top: 20px;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix:after{
+  display: block;
+  content:'';
+  clear:both;
+}
+.mt10{
+  margin-top: 10px!important;
+}
+.h1{
+  margin: 0;
+  padding: 0 20px 0 0;
+  text-align: center;
+  width: 160px;
+  height: 60px;
+  font-size: 18px;
+  line-height: 60px;
+  color:rgb(255,208,75)
+}
+.h1 i {
+  font-size: 25px;
+}
+.el-dropdown-link{
+  color: white;
+  line-height: 60px;
+}
