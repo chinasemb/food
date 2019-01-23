@@ -16,7 +16,7 @@
         <h1 class="h1 fl">
           <i class="iconfont icon-star"></i>后台管理
         </h1>
-        <el-dropdown class="fr" trigger="click" @command="handleCommond">
+        <el-dropdown class="fr mt10" trigger="click" @command="handleCommond">
           <span class="el-dropdown-link">
             下拉菜单
             <i class="el-icon-arrow-down el-icon--right"></i>
@@ -33,7 +33,7 @@
 
       <el-container>
         <el-aside>
-          <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+          <!-- <el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
             <el-radio-button :label="false">展开</el-radio-button>
             <el-radio-button :label="true">收起</el-radio-button>
           </el-radio-group>
@@ -74,7 +74,8 @@
               <i class="el-icon-setting"></i>
               <span slot="title">导航四</span>
             </el-menu-item>
-          </el-menu>
+          </el-menu> -->
+          <AppAside />  
         </el-aside>
         <el-main>正文</el-main>
       </el-container>
@@ -84,7 +85,14 @@
 
 <script lang='ts'>
 import { Vue, Component, Prop } from "vue-property-decorator";
-@Component
+import AppAside from '@/components/app-aside.vue'
+@Component(
+  {
+    components: {
+      AppAside
+    }
+  }
+)
 export default class App extends Vue {
   // data() {
   //   return {
@@ -104,12 +112,12 @@ export default class App extends Vue {
   handleCommond(commond: string) {
     this.$message("click on item " + commond);
   }
-  handleOpen(key:string, keyPath:string) {
-    console.log(key, keyPath);
-  }
-  handleClose(key:string, keyPath:string) {
-    console.log(key, keyPath);
-  }
+  // handleOpen(key:string, keyPath:string) {
+  //   console.log(key, keyPath);
+  // }
+  // handleClose(key:string, keyPath:string) {
+  //   console.log(key, keyPath);
+  // }
 }
 </script>
 
@@ -126,9 +134,9 @@ export default class App extends Vue {
   box-sizing: border-box;
   margin-right: 20px;
 }
-.el-menu-vertical-demo:not(.el-menu--collapse) {
+/* .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
-}
+} */
 </style>
 
