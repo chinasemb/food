@@ -1,0 +1,6 @@
+{
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "files.useExperimentalFileWatcher": true,
+  "workbench.enableExperiments": true,
+  "java.progressReports.enabled": true,
+}

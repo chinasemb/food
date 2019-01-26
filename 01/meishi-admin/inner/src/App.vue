@@ -77,7 +77,12 @@
           </el-menu> -->
           <AppAside />  
         </el-aside>
-        <el-main>正文</el-main>
+        <el-main>
+          <el-breadcrumb separator-class="el-icon-arrow-right">
+            <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+            <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+          </el-breadcrumb>
+        </el-main>
       </el-container>
     </el-container>
   </div>
