@@ -80,8 +80,10 @@
         <el-main>
           <el-breadcrumb separator-class="el-icon-arrow-right">
             <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-            <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+            <el-breadcrumb-item>{{router.text}}</el-breadcrumb-item>
           </el-breadcrumb>
+
+          <router-view></router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -123,6 +125,10 @@ export default class App extends Vue {
   // handleClose(key:string, keyPath:string) {
   //   console.log(key, keyPath);
   // }
+
+  get router () {
+    return this.$store.state.router
+  }
 }
 </script>
 

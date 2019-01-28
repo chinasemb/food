@@ -39,48 +39,11 @@ import { Vue, Component } from "vue-property-decorator";
 export default class AppAside extends Vue {
   isCollapse: boolean = true;
 
-  menus:any[] = [
-    {
-      "text": '首页',
-      "name": '/',
-      "icon": 'iconfont icon-shouye'
-    },
-    {
-      "text": '精选推荐',
-      "name": '/recommend',
-      "icon": 'iconfont icon-tuijian'
-    },
-    {
-      "text": '分类',
-      "name": '/category',
-      "icon": 'iconfont icon-fenlei'
-    },
-    {
-      "text": '美食',
-      "name": '/food',
-      "icon": 'iconfont icon-Food-Icons-'
-    },
-    {
-      "text": '菜单',
-      "name": '/catemenu',
-      "icon": 'iconfont icon-caidan'
-    },
-    {
-      "text": '用户',
-      "name": '/user',
-      "icon": 'iconfont icon-yonghu-tianchong'
-    },
-    {
-      "text": '评论',
-      "name": '/comment',
-      "icon": 'iconfont icon-pinglun'
-    },
-    {
-      "text": '收藏',
-      "name": '/favorite',
-      "icon": 'iconfont icon-star'
-    },
-  ];
+  menus: any[] = []
+
+  created() {
+    this.menus= this.$store.state.menus
+  }
 
   m() {
     console.log("mm");
@@ -95,7 +58,7 @@ export default class AppAside extends Vue {
     console.log(key, keyPath);
   }
   get routerName() {
-    return this.$store.state.routerName
+    return this.$store.state.router.name
   }
 }
 </script>
