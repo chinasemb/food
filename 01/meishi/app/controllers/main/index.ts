@@ -25,7 +25,54 @@ export class MainIndexController {
     // ctx.body = '首页'
 
     ctx.body = ctx.template.render('index.html',{
-      appName: '美食'
+      categories: [
+        {
+          name:'主食/小吃',
+          children: [
+            {
+              name: '包子',
+              title: '一周热门'
+            },
+            {
+              name: '饺子',
+              title: '人气菜肴'
+            },
+            {
+              name: '面条',
+              title: '冬季食谱'
+            },
+            {
+              name: '锅盔',
+              title: '早餐'
+            },
+          ]
+        },
+        {
+          name:'常见菜式',
+          children: [
+            {
+              name: '鱼香茄子',
+              title: '高颜值'
+            },
+            {
+              name: '西红柿蛋',
+              title: '气血双补'
+            },
+            {
+              name: '失眠',
+              title: '失眠吃什么好'
+            },
+            {
+              name: '痛经',
+              title: '痛经吃什么好'
+            },
+            {
+              name: '螃蟹',
+              title: '全民爆红'
+            },
+          ]
+        },
+      ]
     })
   }
   @Get('/user')

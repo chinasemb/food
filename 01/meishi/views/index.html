@@ -54,49 +54,16 @@
                         </ul>
                     </div>
                     <ul class="menu">
+                        {% for category in categories %}
                         <li>
-                            <a href="#">主食/小吃</a>
+                            <a href="#">{{category.name}}</a>
                             <ul class="sub">
-                                <li><a href="#">一周热门一周热门一周热门一周热门<span>近七天最受欢迎近七天最受欢迎近七天最受欢迎近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">一周热门<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">一周热门<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">一周热门<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
+                                {% for child in category.children %}
+                                <li><a href="#">{{child.title}}<span>{{child.name}}</span></a></li>
+                                {% endfor %}
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">常见菜式</a>
-                            <ul class="sub">
-                                <li><a href="#">夏天夏天<span>超过50人收藏</span></a></li>
-                                <li><a href="#">悄悄过去<span>超过50人收藏</span></a></li>
-                                <li><a href="#">留下小秘密<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">测试歌词<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">一周热门<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                                <li><a href="#">一周热门<span>近七天最受欢迎</span></a></li>
-                                <li><a href="#">人气菜肴<span>超过50人收藏</span></a></li>
-                                <li><a href="#">夏季食谱<span>看看大家在吃啥</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">中菜</a>
-                        </li>
-                        <li>
-                            <a href="#">西菜</a>
-                        </li>
-                        <li>
-                            <a href="#">烘焙</a>
-                        </li>
+                        {% endfor %}
                     </ul>
                 </section>
                 <section class="news">
